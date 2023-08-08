@@ -81,6 +81,7 @@ console.log(b);
 let A = "2";
 let B = "5";
 let C = "6";
+let Answer;
 
 B = A + B + C;
 C = B * (C - A);
