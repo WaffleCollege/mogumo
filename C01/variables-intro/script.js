@@ -97,6 +97,8 @@ if(Answer != A){
 	alert("天才！！😘");
 }
 
+
+//lec8-8
 const firstName = "Wafuru";
 const lastName = "Tomoko";
 const city = "Tokyo";
