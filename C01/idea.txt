@@ -1,0 +1,2 @@
+console.log(mogumo);
+//お試し中
