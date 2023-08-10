@@ -85,7 +85,7 @@ console.log(a, b);
 //問題１１
 function createGreeting(greetingPhrase, instructorName) {
   return greetingPhrase + ", " + instructorName + "!";
-}
+}//iya-------
 
 console.log(morningGreeting); //"Good morning, Mike!" を表示
 console.log(dayGreeting); // "Hello, Beau!" を表示
