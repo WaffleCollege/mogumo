@@ -1,6 +1,30 @@
 'use strict'
 // Please don't delete the 'use strict' line above
 
+//Lecture01
+// ヒント： ここで何かする必要があるかもしれません
+let count =0;
+function counter() {
+  count ++ ;
+	console.log(count);
+}
+
+counter(); // => 1
+counter(); // => 2
+counter(); // => 3
+// etc.
+
+//Lecture02
+function isOdd(givenNumber) {
+  if(giveNumber%2 == 0){
+		console.log("Yes,it's odd.");
+	} else {
+		console.log("No,it's even.");
+	}
+  // 与えられた数値によって、"Yes, it's odd" もしくは "No, it's even" を表示
+}
+givenNumber(5);
+
 //1
 const name = "mogumo";
 console.log(name);
