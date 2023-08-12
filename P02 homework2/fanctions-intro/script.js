@@ -71,7 +71,7 @@ aoc(2);
 
 //問題１０
 function simpleHelloA() {
-  console.log("hello");
+  console.log("hello");//値を返してない
 }
 
 function simpleHelloB() {
@@ -80,16 +80,17 @@ function simpleHelloB() {
 
 const a = simpleHelloA();
 const b = simpleHelloB();
-console.log(a, b);
+console.log(a, b);//undefined,hello
 
 //問題１１
 function createGreeting(greetingPhrase, instructorName) {
   return greetingPhrase + ", " + instructorName + "!";
-}//iya-------
+}
 
-console.log(morningGreeting); //"Good morning, Mike!" を表示
-console.log(dayGreeting); // "Hello, Beau!" を表示
-console.log(eveningGreeting); // "Good evening, Alex!" を表示
+console.log(createGreeting("Good morning","Mike")); //"Good morning, Mike!" を表示
+console.log(createGreeting("Hello","Beau")); // "Hello, Beau!" を表示
+console.log(createGreeting("Good evening","Alex")); // "Good evening, Alex!" を表示
+
 //講義用
 function introduce(name,age){
 	console.log("こんにちは");
