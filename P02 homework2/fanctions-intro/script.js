@@ -113,3 +113,13 @@ function double(num){
 	console.log("The return value is", num * 2); //returnされてない
 }
 double(10);//The argument is 20
+
+function subtract(num1,num2){
+	return num1-num2;
+}
+
+function greeting(name){
+	return "Hello, "+name;
+}
+console.log(greeting("Suzuki"));
+console.log(greeting("Sato"));
