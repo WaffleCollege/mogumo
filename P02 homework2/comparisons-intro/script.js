@@ -81,7 +81,14 @@ function isEven(n){
 console.log(isEven(Number(String(265).slice(-1))));
 
 //問題９
-
+function isOfAge(age){
+	if(age>=20){
+		return console.log(true,"乾杯！！") ;
+	}else if(age,20){
+		return console.log(false,"お酒は２０歳から");
+	}
+}
+console.log(isOfAge(19));
 
 //講義用
 if(budjet > 1000){
