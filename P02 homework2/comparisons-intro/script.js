@@ -14,7 +14,7 @@ console.log(isEqual("23", 23));
 function isGreaterThan(valueOne, valueTwo) {
 	if(valueOne>valueTwo){
 		console.log("true");
-	}else if(valueOne<valueTwo){
+	}else if(valueOne<=valueTwo){
 		console.log("false");
 	}
 }
@@ -69,8 +69,8 @@ console.log(validCredentials("aaa".length,"44566".length));
 
 //問題８
 function isEven(n){
-	var gusu =[0,2,4,6,8];
-	var kisu =[1,3,5,7,9];
+	const gusu =[0,2,4,6,8];
+	const kisu =[1,3,5,7,9];
 	//console.log(typeof(n),n);
 	if(gusu.includes(n)){
 		return true;//偶数
