@@ -25,19 +25,17 @@ console.log(isGreaterThan(2,4));//3-2
 function isOfAge(age){
 	if(age>=20){
 		return true;
-	}else if(age,20){
+	} else {
 		return false;
-	}
+	}//return age>=20
 }
 console.log(isOfAge(22));
+console.log(isOfAge(20));
+console.log(isOfAge(19));
 
 //問題５
 function isEven(n){
-	if(n%2===0){
-		return true;
-	}else if(n%2!==0){
-	  return false;
-	}
+	return n % 2 === 0;
 }
 isEven(5);
 
@@ -80,15 +78,23 @@ function isEven(n){
 }
 console.log(isEven(Number(String(265).slice(-1))));
 
+//問題８
+function isEven2(n){
+	return Number.isInteger(n / 2);
+}
+isEven(3);
+
 //問題９
 function isOfAge(age){
 	if(age>=20){
 		return console.log(true,"乾杯！！") ;
-	}else if(age,20){
+	} else {
 		return console.log(false,"お酒は２０歳から");
 	}
 }
-console.log(isOfAge(19));
+isOfAge(22);
+isOfAge(20);
+isOfAge(19);
 
 //講義用
 if(budjet > 1000){
