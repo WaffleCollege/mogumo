@@ -65,6 +65,12 @@ function hiInTheMiddle(actual){
 		console.log(actual);
 		return actual;
 	}
+	/*
+	if actual.length %2 ===1){
+		actual[(actual.length-1)/2]="hi";
+	}
+	return array;
+	*/
 }
 
  actual = hiInTheMiddle([1, 2, 3, 4, 5]);
