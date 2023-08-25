@@ -89,7 +89,10 @@ game("パー");
 // ここに関数を作成しましょう。
 function flatten(array) {
 	return [].concat(...array);
-}
+}//入れ子用
+function flatten(...array) {
+	return [].concat(...array);
+}//2つ以上の配列
 
 console.log(
 	flatten([
