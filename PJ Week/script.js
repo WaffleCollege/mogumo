@@ -30,4 +30,12 @@ function test(actual, expected) {
 	test(haveMultipleElements([1, 2, 3, 4]), true);
 	test(haveMultipleElements([1, 3, 3, 4]), false);
 
-	
+//問題２
+function greatestcd(x,y){
+	if(x%y){
+		return greatestcd(y,x%y);
+	}
+	return y;
+}
+test(greatestcd(33,11), 11);
+test(greatestcd(11,33), 11);
