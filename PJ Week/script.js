@@ -84,3 +84,34 @@ test(game("グー"),"あいこ");
 game("グー");
 game("チョキ");
 game("パー");
+
+//問題４
+// ここに関数を作成しましょう。
+function flatten(input) {
+  const stack = [...input];
+  const res = [];
+  while (stack.length) {
+    // pop value from stack
+    const next = stack.pop();
+    if (Array.isArray(next)) {
+      // push back array items, won't modify the original input
+      stack.push(...next);
+    } else {
+      res.push(next);
+    }
+  }
+  // reverse to restore input order
+  return res.reverse();
+}
+
+
+console.log(
+	flatten([
+		[1, 2, 3],
+		[4, 5, 6],
+	])
+); // [1, 2, 3, 4, 5, 6]
+
+console.log(flatten([1, 2, 3, [4, 5, 6]])); // [1, 2, 3, 4, 5, 6]
+
+console.log(flatten([[1], [2], [3], [4, 5, 6]])); // [1, 2, 3, 4, 5, 6]
