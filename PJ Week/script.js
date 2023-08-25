@@ -91,7 +91,8 @@ function flatten(array) {
 	return [].concat(...array);
 }//入れ子用
 function flatten(...array) {
-	return [].concat(...array);
+	a=[].concat(...array);
+	return [].concat(...a);
 }//2つ以上の配列
 
 console.log(
