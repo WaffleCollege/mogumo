@@ -87,7 +87,7 @@ game("パー");
 
 //問題４
 // ここに関数を作成しましょう。
-function flatten(array) {
+function flatten(...array) {
 	return [].concat(...array);
 }
 
