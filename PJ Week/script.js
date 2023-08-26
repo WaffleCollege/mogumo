@@ -22,7 +22,7 @@ function test(actual, expected) {
 
    function haveMultipleElements(array) {
 		let a = new Set(array);//aは重複した要素がはじかれた後の配列→長さを比べると重複してたかわかる
-		return array, a.size == array.length;
+		return a.size === array.length;
 	}
 
 
