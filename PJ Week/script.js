@@ -1,6 +1,6 @@
 'use strict'
 // Please don't delete the 'use strict' line above
-
+//テスト
 function test(actual, expected) {
   if (JSON.stringify(actual) === JSON.stringify(expected)) {
     console.log("Yay! Test PASSED.");
