@@ -1,5 +1,17 @@
 const todos = ["牛乳を買う","レポートを作る","null","バイトの面接","null"];
 
+console.log("aiueo" && 5 && "" && false);
+
+//ようこそゲストさん
+const user = input || "ゲスト";
+`ようこそ${user}`
+
+//Null 合体演算子(??)
+
+//テスト関数
+"なにかメソッドがあるかも"
+"関数の前にコンソールで問題表示"
+
 //P04-1
 for(const todo of todos){
 	if(todo != "null"){
