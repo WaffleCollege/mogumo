@@ -12,6 +12,21 @@ const user = input || "ゲスト";
 "なにかメソッドがあるかも"
 "関数の前にコンソールで問題表示"
 
+"indexof とは？？"
+
+function isSorted(array) {
+	let count = 0;
+  for(const i of array){
+			if(i < array[i-1]){
+				count ++;
+			}
+	}
+	return true;
+}
+actual = isSorted([1, 2, 3]);
+expected = true;
+test(actual,expected);
+
 //P04-1
 for(const todo of todos){
 	if(todo != "null"){
