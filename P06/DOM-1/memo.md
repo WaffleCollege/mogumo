@@ -13,10 +13,10 @@ const today = new Date();
 let year = today.getFullYear();
 
 // 今日の 月 を取得し、変数に保存
-
+let month = today.getMonth();
 
 // 今日の 日 を取得し、変数に保存
-
+let date = today.getDate();
 
 // あとは、必要な情報をDOM操作を使って、HTMLに表示させよう
 ```
