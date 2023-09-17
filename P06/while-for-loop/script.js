@@ -149,7 +149,7 @@ function sum_arr(array){
 	for(let i=0; i<array.length; i++){
 		sum += array[i];
 	}
-	console.log(sum(...array));
+	console.log(sum);
 	return sum;
 }
 
@@ -158,6 +158,13 @@ test(sum_arr([1, 1, 1, 1, 1]), 5);
 test(sum_arr([1, 2, 3, 4, 5]), 15);
 
 count();//9
-function sum(){
-	
+function sum(...array){
+	let a = [].concat(...array);
+	let sumall = 0;
+	for(let i=0; i<a.length; i++){
+		sumall += a[i];
+	}
+	console.log(sumall);
+	return sumall;
 }
+test(sum([1,2,3],[4,5,6],[7,8],9),45);
