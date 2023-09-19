@@ -27,7 +27,7 @@ console.log(Omoji("hello"));
 function Omoji2(id){//すでに取得した要素で検索
 	id.textContent = id.textContent.toUpperCase();
 }
-console.log(Omoji2(header));
+//console.log(Omoji2(header));
 
 function Omoji3(word){//タグ、id、クラス名で検索
 	const id = document.querySelectorAll(word)
@@ -36,15 +36,34 @@ function Omoji3(word){//タグ、id、クラス名で検索
 		i.textContent = i.textContent.toUpperCase();
 	}
 }
-Omoji3(".inner-paragraph");
+//Omoji3(".inner-paragraph");
 //"body"にすると全部大文字
 
 function Omojiall(){//文字列で検索
+	const body = document.body;
+	//const id = document.querySelectorAll("body")
+	const elementsInBody = body.getElementsByTagName('*');
+	console.log(elementsInBody);
+	//console.log(elementsInBody.flat());
+	for(let element of elementsInBody){//＊空白ノード判別
+		console.log(element.nodeType);
+		if (element.nodeType === Node.TEXT_NODE) {
+			
+			// For text nodes, convert text content to uppercase
+			element.textContent = element.textContent.toUpperCase();
+		}
+	}
+}
+//Omojiall();
+//大文字にはなるけどつめつめになっちゃう。。。
+// Find the <body> element
+// Get a list of all DOM elements within the <body> tag
+
+function Omoji4(){//タグ、id、クラス名で検索
 	const id = document.querySelectorAll("body")
 	console.log(id);
 	for(let i of id){
-		i.textContent = i.textContent.toUpperCase();
+		i.innerHTML = i.innerHTML.toUpperCase();//すっきりしたーーーー
 	}
 }
-Omojiall();
-//大文字にはなるけどつめつめになっちゃう。。。
+Omoji4();
