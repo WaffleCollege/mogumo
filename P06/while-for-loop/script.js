@@ -117,21 +117,11 @@ test(addTogether([1, 2, 3], [7, 8, 9]), [8, 10, 12]);
 
 console.log("7-2");
 function addTogether2(array1,array2){
-	let big;
-	let small;
 	let answer =[];
-	if(array1>array2){
-		big = array1;
-		small = array2;
-	}else{
-		big = array2;
-		small = array1;
-	}
-	for(let i=0;i<big.length;i++){
-		if(i>=small.length){
-			small[i]=0;
-		}
-		answer.push(big[i]+small[i]);
+	const Maxlength = Math.max(array1.length, array2.length);
+	for(let i=0;i<Maxlength;i++){
+		let num = (array1[i] ||0) + (array2[i] || 0);//||を上手く使おう！
+		answer.push(num);
 	}
 	console.log(answer);
 	return answer;
@@ -168,3 +158,12 @@ function sum(...array){
 	return sumall;
 }
 test(sum([1,2,3],[4,5,6],[7,8],9),45);
+
+function counter(num){
+  let i =0;
+  while(i<=num){
+    console.log(i);
+    i++;
+  }
+}
+counter(5);
