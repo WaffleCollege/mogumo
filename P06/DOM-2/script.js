@@ -22,21 +22,21 @@ for(let p of paragraph){
 function Omoji(word){
 	return word.toUpperCase();
 }
-console.log(Omoji("hello"));
+console.log(Omoji("hello123"));
 
 function Omoji2(id){//すでに取得した要素で検索
 	id.textContent = id.textContent.toUpperCase();
 }
 //console.log(Omoji2(header));
 
-function Omoji3(word){//タグ、id、クラス名で検索
+function Omoji3(word){//タグ、id(#)、クラス名(.)で検索
 	const id = document.querySelectorAll(word)
 	console.log(id);
 	for(let i of id){
 		i.textContent = i.textContent.toUpperCase();
 	}
 }
-//Omoji3(".inner-paragraph");
+//Omoji3("p");
 //"body"にすると全部大文字
 
 function Omojiall(){//文字列で検索
@@ -60,10 +60,10 @@ function Omojiall(){//文字列で検索
 // Get a list of all DOM elements within the <body> tag
 
 function Omoji4(){//タグ、id、クラス名で検索
-	const id = document.querySelectorAll("body")
+	const id = document.querySelectorAll("*")
 	console.log(id);
 	for(let i of id){
-		i.innerHTML = i.innerHTML.toUpperCase();//すっきりしたーーーー
+		i.innerHTML = i.innerHTML.toUpperCase();
 	}
 }
 Omoji4();
