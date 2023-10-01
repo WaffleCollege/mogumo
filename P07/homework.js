@@ -63,3 +63,20 @@ console.log(papas); // "Monday,so good for me"
 console.log(mamas === papas); // false
 
 console.log("07-1,4");
+const theFabFour = {
+  bass: ["paul"],
+  drums: ["ringo"],
+  guitar: ["george", "john"],
+  vocals: ["george", "john", "paul", "ringo"],
+};
+
+const theFifthBeatle = theFabFour;
+theFifthBeatle.guitar.push("beau");
+
+console.log(theFabFour); // {bass: ["paul"],drums: ["ringo"],guitar: ["george", "john"],vocals: ["george", "john", "paul", "ringo"],}
+console.log(theFifthBeatle); // {bass: ["paul"],drums: ["ringo"],guitar: ["george", "john"],vocals: ["george", "john", "paul", "ringo"],}
+console.log(theFabFour === theFifthBeatle); // true
+
+console.log(theFabFour.guitar); // "george","john","beau"
+console.log(theFifthBeatle.guitar); // "george","john","beau"
+console.log(theFabFour.guitar === theFifthBeatle.guitar); // true
