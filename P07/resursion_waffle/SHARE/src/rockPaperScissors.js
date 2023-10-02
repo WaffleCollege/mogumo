@@ -1,6 +1,4 @@
 /* exported rockPaperScissors */
-
-console.log("1-1");
 const rockPaperScissors = (rounds = 3) => {
   let out = [];
   const weapons = ["rock", "scissors", "paper"];
