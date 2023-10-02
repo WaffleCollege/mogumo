@@ -4,5 +4,5 @@ console.log("2");
 //const elements = document.getElementsByClassName(className);
 
 const getElementsByClassName = () => {
-
+	
 };
