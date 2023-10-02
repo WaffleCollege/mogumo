@@ -1,5 +1,6 @@
 /* exported getElementsByClassName */
 
 const getElementsByClassName = () => {
-  // YOUR CODE HERE
+  const className = "example";
+	const elements = document.getElementsByClassName(className);
 };
