@@ -17,6 +17,7 @@ const rockPaperScissors = (rounds = 3) => {
   play(rounds);
   return out;
 };
+console.log(rockPaperScissors());
 /*
 function rockPaperScissorsR(rounds){
 	let out = [];
