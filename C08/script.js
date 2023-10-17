@@ -33,7 +33,7 @@ function merge(left,right){
 	}
 	console.log("ここ",result,left,right,l,r)
 	return result.concat(left.slice(l)).concat(right.slice(r));
-}//配列がうまくつながってくれない→concat,余分なのが入りすぎる→slice
+}//配列をつなげる→concat,余分なのを入れない→slice
 
 let arr = [1,5,4,3,8,7,6,10,18,2];
 console.log(mergeSort(arr));// => [1, 2, 3, 4, 5, 6, 7, 8, 10, 18]
