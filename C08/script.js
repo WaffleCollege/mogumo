@@ -12,6 +12,7 @@ function mergeSort(arr) {
 	}else{
 		return arr;
 	}
+
 	return merge(mergeSort(arr1),mergeSort(arr2));
 }
 
@@ -21,8 +22,6 @@ function merge(left,right){
 	let r = 0;
 
 	while(l < left.length && r < right.length){
-		console.log("ひだり:"+left[l]);
-		console.log("みぎ:"+right[r]);
 		if(left[l] < right[r]){
 			result.push(left[l]);
 			l++;
@@ -31,7 +30,6 @@ function merge(left,right){
 			r++;
 		}
 	}
-	console.log("ここ",result,left,right,l,r)
 	return result.concat(left.slice(l)).concat(right.slice(r));
 }//配列をつなげる→concat,余分なのを入れない→slice
 
