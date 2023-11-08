@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="/meiry.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body>
+    <header>
+        <h1>
+          ぼくらの推し事
+        </h1>
+        <ul>
+          <li><button id="mogumo" onclick="mogbtn()">もぐも</button></li>
+          <li><button id="yacchi-" onclick="yachibtn()">やっちー</button></li>
+          <li> <button id="amiba" onclick="amibtn()">あみば</button></li>
+          <li><button id="meiry" onclick="meibtn()" style="background-color:#FFA8A8">めいりー</button></li>
+        </ul>
+      </header>
+
+      <main>
+        <h2 class="recommend">めいりーのおすすめ</h2>
+        
+        <div class ="box">
+          <div class ="artist">
+            <h2 class ="name">ADELE</h2>
+            <img src ="https://upload.wikimedia.org/wikipedia/commons/f/f3/Adele_-_Live_2016%2C_Glasgow_SSE_Hydro_03.jpg"> <br>
+            <a href="https://commons.wikimedia.org/wiki/File:Adele_-_Live_2016,_Glasgow_SSE_Hydro_03.jpg">marcen27 from Glasgow, UK</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
+          </div>
+         
+        <div class ="topic">
+          <section>
+            <h3>おすすめの曲</h3>
+              <p>Make You Feel My Love(cover)</p>
+              <p>Chasing Pavements</p>
+              <p>Someone Like You</p>
+              <p>When We Were Young</p>
+              <p>To Be Loved</p>
+              <p>Love Is A Game</p>
+          </section>
+          
+          <section>
+            <h3>最近の活動</h3>
+              <p class ="live">Weekends with Adele（ラスベガスでの公演 2023年6月16日- 2023年11月4日</p>
+              <p>ニューアルバム『30』のリリース(2021年11月19日リリース)</p>
+          </section>
+          
+          <section>
+            <h3>推しポイント</h3>
+              <p>
+               ロンドン出身の歌手。<br>
+               自身の経験を基にした歌詞をシンプルでどこか切ないメロディにのせた音楽と力強くてハスキーな歌声が魅力です！<br>
+               音楽を何よりも大切にしているアデルが作る決して完璧ではない等身大の人間の心情を繊細に表現した曲にはいつも心を揺さぶられます。<br>
+               飾らず、正直で親しみやすい人柄もチャーミングでかわいらしい！！！
+              </p>
+          </section>
+          <section>
+            <h3>💖ボタンを押すとおすすめのアデルの曲がでてきます！！！💖</h3>
+            <div class = "adeleBtn">
+            <button id="reccomendButton" type="button">クリックしてみてください🐈</button>
+            </div>
+            <div id="recommend_contents">
+              <p>あなたへのおすすめは...</p>
+              <h2 id="text"></h2>
+              <iframe
+                id="mv"
+                src=""
+                width="300"
+                height="225"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>        
+
+        </div>
+      </div>
+      </main>
+      <footer>
+        <button id = "scroll_to_top" onclick="scroll_to_top()">
+          topに戻る
+        </button>
+        <p>
+          @team7
+        </p>
+      </footer>
+      <script>
+        function randomMV() {
+          const mvUrls = [
+            "https://www.youtube.com/embed/08DjMT-qR9g",
+            "https://www.youtube.com/embed/jb5g4UFHmfQ?",
+            "https://www.youtube.com/embed/0put0_a--Ng?list=RD08DjMT-qR9g",
+            "https://www.youtube.com/embed/tQw1_sX9ipc?list=RD08DjMT-qR9g",
+            "https://www.youtube.com/embed/hLQl3WQQoQ0",
+            "https://www.youtube.com/embed/a1IuJLebHgM",
+            "https://www.youtube.com/embed/Ri7-vnrJD3k",
+            "https://www.youtube.com/embed/3SojhAemf34",      
+            "https://www.youtube.com/embed/_dlExeOyFh4",
+            "https://www.youtube.com/embed/oPmMUZbnc3o",
+            "https://www.youtube.com/embed/X-yIEMduRXk",
+            "https://www.youtube.com/embed/rYEDA3JcQqw"
+          ];
+          const songTitles = [
+          "Chasing Pavements", 
+          "All I Ask", 
+          "Make You Feel My Love (cover)", 
+          "Don't You Remember",
+          "Someone Like You",
+          "When We Were Young", 
+          "Set Fire To The Rain",
+          "Turning Tables",
+          "To Be Loved",
+          "Love Is A Game",
+          "Easy On Me",
+          "Rolling in the Deep",
+          ];
+          let random_num = Math.floor(Math.random() * mvUrls.length);
+          let resultText = songTitles[random_num];
+          let resultMV = mvUrls[random_num];
+          const iframe = document.getElementById("mv");
+          iframe.src = resultMV;
+          console.log(resultMV);
+          document.getElementById("text").textContent = "✨" + resultText + "✨";
+        }
+      
+        let recommendButton = document.getElementById("reccomendButton");
+      
+        recommendButton.onclick = () => {
+          randomMV();
+        };
+      </script>              
+        
+  </body>
+</html>

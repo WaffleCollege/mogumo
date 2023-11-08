@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Hello World!</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/amiba.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1>
+          ぼくらの推し事
+        </h1>
+        <ul>
+          <li><button id="mogumo" onclick="mogbtn()">もぐも</button></li>
+          <li><button id="yacchi-" onclick="yachibtn()">やっちー</button></li>
+          <li><button id="amiba" onclick="amibtn()" style="background-color:#00a1e9">あみば</button></li>
+          <li><button id="meiry" onclick="meibtn()">めいりー</button></li>
+        </ul>
+      </header>
+
+      <main style="background-color:#a3d1ff;">
+        <h2 class="recommend">あみばのおすすめ</h2>
+        
+        <div class ="box">
+          <div class ="artist">
+            <h2 class ="name">RADWINPS</h2>
+            <img src ="https://cdn.glitch.global/2e903540-c44a-4aa9-942c-964f88995c6d/rad.jpg?v=1695714873018">
+          </div>
+         
+          <div class ="topic">
+            <section>
+              <h3 class="fonts">おすすめの曲</h3>
+              <div class = "song">
+              <p class="music">1. 最大公約数</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/kJa1U3MEv1I?si=dDFfr7ci4PVV2WQF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <p>この曲のおすすめポイントとして、<span>男女二人の関係を最大公約数で表している</span>ところです！</p>
+              <p>例えば、</p>
+              <blockquote>
+                ------------------------------------------------------------------------------------
+                <br>
+                "何を与えるでもなく　無理に寄りそうわけでもなく"
+                <br>
+                "つまりは探しにいこう　二人の最大公約数を"
+                <br>
+                ------------------------------------------------------------------------------------
+              </blockquote>
+              <p>この歌詞では、<span>相手に無理に合わせるのではなく、二人が共通する部分を見つけ、自然に寄り添いあっていこうという気持ち</span>が歌詞に込められていると感じ取れます！</p>
+              <p>他にも</p>
+              <blockquote>
+                ------------------------------------------------------------------------------------
+                <br>
+                "君が8なら僕は2になる"
+                <br>
+                "僕が10なら君は5になる"
+                <br>
+                ------------------------------------------------------------------------------------
+              </blockquote>
+              <p>
+                この部分では、8の最大公約数は4であるところを僕は2と表現することで、<span>僕はまだ彼女にとって大きな存在ではない</span>という事を伝えていると思います！
+                逆に、僕が10なら君は5になると表現されていることから、<span>僕にとって彼女は大きな存在で、大事な人であること</span>を指していると思います！
+              </p>
+              <p>
+              このように、最大公約数で二人の関係性を示しており、素敵な歌詞でとても好きです！
+              </p>
+              </div>
+              
+              <div class="song">
+              <p class="music">2. 有心論</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/c2y8Ba3WwPY?si=vKSr29PkfN5jZahp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <p>
+                この曲のおすすめポイントが、<span>自分が思いつかない発想を歌詞に込めているところ</span>です！
+              </p>
+              <p>
+                好きなフレーズをいくつかあげさせてもらいます！
+              </p>
+              <blockquote>
+                ------------------------------------------------------------------------------------
+                <br>
+                "誰も端っこで泣かないようにと　君は地球を丸くしたんだろう？"
+                <br>
+                ------------------------------------------------------------------------------------
+              </blockquote>
+              <blockquote>
+                ------------------------------------------------------------------------------------
+                <br>
+                "誰も命無駄にしないようにと　君は命に終わり作ったよ"
+                <br>
+                ------------------------------------------------------------------------------------
+              </blockquote>
+              </div>
+            </section>
+          
+            <section>
+            <h3 class="fonts">最近の活動</h3>
+              <p class="live">BACK TO THE LIVE HOUSE TOUR 2023<br></p>
+            </section>
+            
+          </div>
+        </div>
+      </main>
+      <footer>
+        <button id = "scroll_to_top" onclick="scroll_to_top()">
+          topに戻る
+        </button>
+        <p>
+          @team7
+        </p>
+      </footer>
+  </body>
+</html>
