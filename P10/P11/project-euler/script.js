@@ -63,3 +63,8 @@ function lcm(a, b) {
 }
 
 console.log(Smallest(20));
+
+//回文
+var isPalindrome = function(x) {
+	return x.toString() === x.toString().split("").reverse().join("");
+};
