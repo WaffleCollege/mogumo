@@ -31,11 +31,7 @@ test(arrayOfNumbers2.filter(isMultipleOfTen), [20, 30, 100]);
  * @returns {boolean} 与えられた文字列に母音 (a, e, i, o, u) が1つ以上含まれているか
  */
 const hasAVowel = (array) => {
-	return array.includes("a") ||
-	array.includes("i") ||
-	array.includes("u") ||
-	array.includes("e") ||
-	array.includes("o");
+	return /a|i|u|e|o/.test(array);
 }
 
 const arrayOfStrings1 = ["bat", "ball", "tree", "cow", "bnm"];
