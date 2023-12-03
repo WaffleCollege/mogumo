@@ -4,7 +4,7 @@
 
 function hello(callback){
 	console.log("私は呼び出し元の関数です");
-	callback();
+	callback(greet);
 }
 
 function greet(){
