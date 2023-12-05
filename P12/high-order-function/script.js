@@ -105,4 +105,3 @@ console.log("問題3");
 test(getSwitched([1, 2, 3]), ["1", "2", "3"]);
 test(getSwitched(["1", "2", "3"]), [1, 2, 3]);
 test(getSwitched(["1", 2, "3"]), [1, "2", 3]);
-
