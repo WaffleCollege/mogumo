@@ -29,6 +29,7 @@ console.log(b); // "B" を表示
 function validCredentials(username,password){
 	return username >= 4 && password >= 8;
 }
+count();
 test(validCredentials(5,9),true);
 
 //問題３
@@ -77,5 +78,42 @@ function printCars() {
 }
 count();
 printCars();
-
+/*
 //問題５-1
+array=document.getElementsByClassName("athing");
+for(let a of array){
+	a.style.backgroundColor = "red";
+}
+//問題５-2
+for(let i = 0; i < array.length; i++){
+	if(i%2 === 0){
+		array[i].style.backgroundColor = "red";
+	}else{
+		array[i].style.backgroundColor = "green";
+	}
+}
+*/
+//問題６
+		/**
+ * @param {Array<string>} ???
+ * @returns {Array<string>} 与えられた配列の中にある、大文字で始まり、疑問符で終わる文字列のみを要素として持つ配列
+ */
+const getQuestions = (array) =>
+	array.filter((a)=>
+		a.slice(-1) === "?" && /^[A-Z]+$/g.test(a.slice(0,1))
+	);
+
+const arrayOfStrings3 = [
+  "Hi, there.",
+  "What in the world?",
+  "My name is JavaScript",
+  "Do you want to know a secret?",
+];
+
+test(getQuestions(arrayOfStrings3), [
+  "What in the world?",
+  "Do you want to know a secret?",
+]);
+test(getQuestions(arrayOfStrings3.slice(2)), [
+  "Do you want to know a secret?",
+]);
