@@ -1,8 +1,14 @@
 body{
 	text-align: center;
 	background-color: aliceblue;
+	background-image: url("chara.png");
 }
 
 h1{
 	background-color: white;
+}
+
+p{
+	font-family: 'Press Start 2P', system-ui;
+	font-size: small;
 }
