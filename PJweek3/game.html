@@ -3,6 +3,7 @@
   <head>
     <title>ブロック崩し</title>
     <link rel="stylesheet" href="public/style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
 
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,9 +13,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <h1>ブロック崩し</h1>
-    <script>
+  <body class="flex flex-col">
+		<h1 class = "flex-none text-4xl font-bold w-full m-4">ブロック崩し</h1>
+		<div class = "flex">
+    <script class = "flex-none">
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
 
@@ -49,8 +51,8 @@
         update: function () {
           ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
 
-          if (this.x < 0 || this.x > canvas.width-15) this.dx *= -1;
-          if (this.y < 0 || this.y > canvas.height-15) this.dy *= -1;
+          if (this.x < 0 || this.x > canvas.width - 15) this.dx *= -1;
+          if (this.y < 0 || this.y > canvas.height - 15) this.dy *= -1;
 
           this.x += this.dx;
           this.y += this.dy;
@@ -114,7 +116,7 @@
         paddle.y = canvas.height - paddle.height;
 
         ball.x = canvas.width / 2 - 13;
-        ball.y = canvas.height / 2 - 43;
+        ball.y = canvas.height / 2 - 50;
 
         ball.dx = Math.random() < 0.5 ? ball.speed : -ball.speed;
         ball.dy = ball.speed;
@@ -174,7 +176,7 @@
             if (collide(ball, brick) && brick.hits > 0) {
               ball.dy *= -1;
               brick.hits--;
-              //            block.data.splice(index, 1);
+//            block.data.splice(index, 1);
             }
           });
 
@@ -184,7 +186,7 @@
             init();
             gamestart = false;
           }
-          if (ball.y > canvas.height-12) {
+          if (ball.y > canvas.height - 15) {
             gameover = false;
             alert("Game Over! You lost.");
             init();
@@ -215,14 +217,13 @@
 
       document.addEventListener("keyup", () => (paddle.speed = 0));
     </script>
+		</div>
 
-    <p class="press">+ press space to start +</p>
-		<div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 py-12">
-      <div className="animate-bounce">
-          <h1 className="background-animate font-extrabold text-8xl bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent text-center p-5 mb-4 leading-none text-gray-900">
-                Loading...
-          </h1>
+      <div class="animate-bounce">
+        <p class="background-animate font-extrabold text-1xl bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent text-center p-5 mb-4 leading-none text-gray-900">
+          + press space to start +
+        </p>
       </div>
-</div>
+
   </body>
 </html>
