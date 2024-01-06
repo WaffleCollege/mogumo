@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 app.get('/', (request, response) => {
-  response.sendFile(__dirname + '/public/game.html');
+  response.sendFile(__dirname + '/game.html');
 });
 
 app.use((req, res, next) => {

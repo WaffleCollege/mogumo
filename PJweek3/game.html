@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>ブロック崩し</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="public/style.css" />
 
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,7 +40,7 @@
         dy: null,
 
         init: function () {
-          this.image.src = "neko.png";
+          this.image.src = "public/neko.png";
           this.image.onload = () => {
             draw(); // 描画を開始する
           };
@@ -114,7 +114,7 @@
         paddle.y = canvas.height - paddle.height;
 
         ball.x = canvas.width / 2 - 13;
-        ball.y = canvas.height / 2 - 50;
+        ball.y = canvas.height / 2 - 43;
 
         ball.dx = Math.random() < 0.5 ? ball.speed : -ball.speed;
         ball.dy = ball.speed;
@@ -184,7 +184,7 @@
             init();
             gamestart = false;
           }
-          if (ball.y > canvas.height) {
+          if (ball.y > canvas.height-12) {
             gameover = false;
             alert("Game Over! You lost.");
             init();
@@ -216,6 +216,13 @@
       document.addEventListener("keyup", () => (paddle.speed = 0));
     </script>
 
-    <p>+ press space to start +</p>
+    <p class="press">+ press space to start +</p>
+		<div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 py-12">
+      <div className="animate-bounce">
+          <h1 className="background-animate font-extrabold text-8xl bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent text-center p-5 mb-4 leading-none text-gray-900">
+                Loading...
+          </h1>
+      </div>
+</div>
   </body>
 </html>
