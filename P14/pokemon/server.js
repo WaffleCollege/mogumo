@@ -10,6 +10,13 @@ result.then((response) => {
 //	console.log("ステータスコード: ", response.status);
 });
 
+fetch("https://dog.ceo/api/breeds/image/random")
+.then((response) => {
+	response.json().then((data) => {
+		console.log("dog: ", data);
+	});
+});
+
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', (request, response) => {
@@ -20,8 +27,11 @@ app.get('/hello', (request, response) => {
   response.send('Hello World!');
 });
 
-app.get('/form', (request, response) => {
-  response.sendFile(__dirname + '/form.html');
+app.get('/hello-json', (request, response) => {
+  const obj = {
+		message: "Hello JSON!"
+	};
+	response.json(obj);
 });
 
 app.post('/sample', (request, response) => {
