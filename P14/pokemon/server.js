@@ -10,10 +10,10 @@ result.then((response) => {
 //	console.log("ステータスコード: ", response.status);
 });
 
-fetch("https://dog.ceo/api/breeds/image/random")
+fetch("https://weather.tsukumijima.net/api/forecast/city/400010")
 .then((response) => {
 	response.json().then((data) => {
-		console.log("dog: ", data);
+		console.log("お天気: ", data.forecasts[1]);
 	});
 });
 

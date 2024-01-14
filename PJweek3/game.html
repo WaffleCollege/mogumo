@@ -3,7 +3,6 @@
   <head>
     <title>ブロック崩し</title>
     <link rel="stylesheet" href="public/style.css" />
-		<script src="https://cdn.tailwindcss.com"></script>
 
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,10 +12,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="flex flex-col">
-		<h1 class = "flex-none text-4xl font-bold w-full m-4">ブロック崩し</h1>
-		<div class = "flex">
-    <script class = "flex-none">
+  <body>
+		<h1>ブロック崩し</h1>
+    <script>
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
 
@@ -218,12 +216,9 @@
       document.addEventListener("keyup", () => (paddle.speed = 0));
     </script>
 		</div>
-
-      <div class="animate-bounce">
-        <p class="background-animate font-extrabold text-1xl bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent text-center p-5 mb-4 leading-none text-gray-900">
+		    <p>
           + press space to start +
         </p>
-      </div>
 
   </body>
 </html>
