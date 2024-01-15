@@ -23,14 +23,14 @@ const getTodayForecast = (地域コード) => {
 			Number(地域コードs.slice(0,2)) < 0 || 地域コードs.slice(0,2) > 47 ||
 			String(地域コードs).slice(-4) !== "0000"
 			) {
-    console.error("正しい地域コードを入力してください");
+    console.error("問題２：正しい地域コードを入力してください");
 		result = "正しい地域コードを入力してください";
     return;
   }
 	const お天気API = weatherApi + 地域コード + ".json";
 	fetch(お天気API).catch((error) => {
 		console.log("catch: ", error);
-		console.log("問題２：情報を取得できませんでした");
+		console.log("問題４：情報を取得できませんでした");
 		result = "情報を取得できませんでした";
 	}).then((response) => {
     response.json().then((data) => {
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (report) {
     report.style.color = "red";
+		//問題３
 		report.innerHTML = result;
   } else {
     console.error("要素が見つかりませんでした");
