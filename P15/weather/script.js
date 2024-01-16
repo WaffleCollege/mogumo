@@ -41,6 +41,7 @@ const getTodayForecast = (地域コード) => {
 			console.log(data);
 			result ="今日の"+ 地域 + "の天気は " + 今日の天気;
     
+			//こんなことをする必要はなかった()
 			const event = new Event('DOMContentLoaded');
 			document.dispatchEvent(event);
 		})
@@ -61,3 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("要素が見つかりませんでした");
   }	
 });
+
+//こんなことをする必要はなかった()
+// const event = new Event('DOMContentLoaded');
+// document.dispatchEvent(event);
+//ChromeのコンソールでgetTodayForecast(400000);
+//してからreport.innerHTMLでできる
