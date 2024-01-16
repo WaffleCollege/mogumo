@@ -20,10 +20,11 @@ const getTodayForecast = (地域コード) => {
 	const 地域コードs = String(地域コード);
 	  if (
 			地域コードs.length !== 6 ||
-			Number(地域コードs.slice(0,2)) < 0 || 地域コードs.slice(0,2) > 47 ||
-			String(地域コードs).slice(-4) !== "0000"
+			Number(地域コードs.slice(0,2)) < 0 || 地域コードs.slice(0,2) > 47 
+			// || String(地域コードs).slice(-4) !== "0000"
+			|| 地域コード <= 480000
 			) {
-    console.error("問題２：正しい地域コードを入力してください");
+    console.log("問題２：正しい地域コードを入力してください");
 		result = "正しい地域コードを入力してください";
     return;
   }
