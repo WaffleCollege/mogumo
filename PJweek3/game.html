@@ -14,9 +14,13 @@
   </head>
   <body>
 		<h1>ブロック崩し</h1>
+		<p class = "PressKey">
+			+ press space to start +
+		</p>
     <script>
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
+			const comment = document.querySelector(".PressKey");
 
       canvas.width = 400;
       canvas.height = 400;
@@ -40,7 +44,7 @@
         dy: null,
 
         init: function () {
-          this.image.src = "public/neko.png";
+          this.image.src = "public/neko.png";//ボールを猫に
           this.image.onload = () => {
             draw(); // 描画を開始する
           };
@@ -73,7 +77,7 @@
           if (this.x + this.width > canvas.width) {
             this.x = canvas.width - this.width;
           }
-          ctx.fillStyle = "black";
+          ctx.fillStyle = "#4e454a";
           ctx.fillRect(this.x, this.y, this.width, this.height);
           ctx.fill();
         },
@@ -87,11 +91,13 @@
           this.data.forEach((brick) => {
             if (brick.hits > 1) {
               ctx.fillStyle = "#4169e1"; // ブロックの色を指定
+							ctx.strokeStyle = "#4e454a";
               ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
               ctx.strokeRect(brick.x, brick.y, brick.width, brick.height);
               ctx.stroke();
             } else if (brick.hits > 0) {
               ctx.fillStyle = "#b0c4de"; // ブロックの色を指定
+							ctx.strokeStyle = "#003f8e";
               ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
               ctx.strokeRect(brick.x, brick.y, brick.width, brick.height);
               ctx.stroke();
@@ -102,10 +108,10 @@
       const level = [
         [0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0],
-        [2, 2, 2, 2, 2, 2],
-        [2, 2, 2, 2, 2, 2],
-        [1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1],
+        [2, 1, 2, 1, 2, 1],
+        [1, 2, 1, 2, 1, 2],
+        [2, 1, 2, 1, 2, 1],
+        [1, 2, 1, 2, 1, 2],
       ];
 
       const init = () => {
@@ -182,12 +188,14 @@
             gameover = false;
             alert("Congratulations! Game Clear!");
             init();
+						comment.style.visibility = "visible";
             gamestart = false;
           }
           if (ball.y > canvas.height - 15) {
             gameover = false;
             alert("Game Over! You lost.");
             init();
+						comment.style.visibility = "visible";
             gamestart = false;
           }
           window.requestAnimationFrame(loop);
@@ -207,7 +215,8 @@
         if (e.key === " " && gamestart === false) {
           gameover = true;
           console.log("スタート");
-          loop();
+          comment.style.visibility = "hidden";
+					loop();
         } else if (e.key === " ") {
           console.log("押しても意味ないですから...");
         }
@@ -215,10 +224,6 @@
 
       document.addEventListener("keyup", () => (paddle.speed = 0));
     </script>
-		</div>
-		    <p>
-          + press space to start +
-        </p>
 
   </body>
 </html>
