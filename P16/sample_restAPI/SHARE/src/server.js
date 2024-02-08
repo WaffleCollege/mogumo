@@ -13,19 +13,23 @@ const setupServer = () => {
   });
 
   // ↓↓↓↓ 宿題のプログラムは、ここより下に書く　http://localhost:3000/api/pokemon?limit=3
+
+  // ポケモンの完全なリストを返すAPI
   app.get("/api/pokemon", (req, res) => {
-    const limit = parseInt(req.query.limit);
+    const limit = Number(req.query.limit);
+    let result = pokeData.pokemon;
+
     if (limit) {
-      return res.json(pokeData.slice(0, limit));
+      result = result.slice(0, limit);
     }
-    res.send(pokeData.pokemon);
+    res.send(result);
   });
 
   app.get("/api/pokemon/:id", (req, res) => {
     const id = req.params.id;
-    const pokemon = pokeData.find((poke) => poke.id === id);
-    if (pokemon) {
-      res.send(pokemon);
+    let result = pokeData.pokemon[id - 1];
+    if (result) {
+      res.send(result);
     } else {
       res.status(404).send("Not Found");
     }
@@ -49,3 +53,13 @@ const setupServer = () => {
 };
 
 module.exports = { setupServer };
+
+/*
+fetch("http://localhost:3000/api/pokemon?limit=3")
+  .then((res) => res.json())
+	.then((data) => console.log(data));
+
+	fetch("http://localhost:3000/api/pokemon/042")
+  .then((res) => res.json())
+	.then((data) => console.log(data));
+*/
