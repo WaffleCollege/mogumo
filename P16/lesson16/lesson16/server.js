@@ -12,7 +12,7 @@ const Users = [
 ];
 
 // ユーザー一覧を返すAPI
-app.get("/get/users-list", (request, response) => {
+app.get("/users", (request, response) => {
   response.json(Users);
 });
 
@@ -21,7 +21,7 @@ app.get("/get/users-list", (request, response) => {
  * ※ :userId のように : 付きのルーティングを設定すると、URL内に含まれる任意の値を取得することができる
  * 例）/get/user/1 にアクセスした場合、request.params.userId は 1 となる
  */
-app.get("/get/user/:userId", (request, response) => {
+app.get("/user/:userId", (request, response) => {
   // users配列から、指定されたユーザーIDのユーザーを取得する
   const target = Users.find(user => {
     // :userId に指定された値を取得する
