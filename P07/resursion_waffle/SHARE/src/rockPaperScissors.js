@@ -18,27 +18,3 @@ const rockPaperScissors = (rounds = 3) => {
   return out;
 };
 console.log(rockPaperScissors());
-/*
-function rockPaperScissorsR(rounds){
-	let out = [];
-	const weapons = ["rock","scissors","paper"];
-	const play = (rounds, result = []) => {
-		
-		if(rounds < 1) {//roundsが1未満の時終了
-			out.push(result);
-			return result;
-		}
-
-		for(let i =0; i < weapons.length; i++){
-			const weapon = weapons[i];
-			play(rounds - 1,result.concat(weapon));
-		}
-	};
-	play(rounds);
-	return console.log(out);
-};
-console.log(rockPaperScissorsR(3));
-
-console.log("1-2");
-rockPaperScissorsR(4);
-*/

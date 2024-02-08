@@ -1,52 +1,23 @@
-/* exported getElementsByClassName */
+function getElementsByClassName(className) {
+  // ドキュメント内のすべての要素を取得
+  var elements = document.getElementsByTagName("*");
 
-//const className = "example";
-//const elements = document.getElementsByClassName(className);
+  // 結果を格納する配列
+  var result = [];
 
-/*
-const getElementsByClassName = () => {
-	const node = [];
-	node.push(document.body);
-	let a = 0;
-	function childsearch(){
-		if(node[a].hasChildNodes()){
-			for(let i = 0; i<node[a].childNodes.length; i++){
-				node.push(node[a].childNodes[i]);
-			}
-			a++;
-		}else{
-			a++;
-		}
-	}
-	while(node.length<=50){
-		childsearch();
-	}
-	console.log(node);
-	return node;
-}
-*/
-function getAllElements(parentElement = document) {
-  const elements = [];
-
-  function searchForElements(node) {
-    elements.push(node);
-
-    if (node.childNodes.length > 0) {
-      for (let i = 0; i < node.childNodes.length; i++) {
-        searchForElements(node.childNodes[i]);
-      }
+  // 各要素をチェックしてクラス名が一致するものを結果に追加
+  for (var i = 0; i < elements.length; i++) {
+    var classNames = elements[i].className.split(" ");
+    if (classNames.indexOf(className) !== -1) {
+      result.push(elements[i]);
     }
   }
 
-  searchForElements(parentElement);
-  return elements;
+  return result;
 }
-window.addEventListener('load', function() {
-  console.log(getAllElements());
-});
 
+// 例としてクラス名が "example" の要素を取得する
+var elements = getElementsByClassName("example");
 
-//let a = document.body
-//a = a.childNodes
-//a = a.children
-
+// 結果をコンソールに出力
+console.log(elements);
