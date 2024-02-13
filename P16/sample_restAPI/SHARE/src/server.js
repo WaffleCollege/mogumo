@@ -34,6 +34,22 @@ const setupServer = () => {
       res.status(404).send("Not Found");
     }
   });
+
+  app.post("/api/pokemon", (req, res) => {
+    pokeData.pokemon.push({ id, name });
+    res.status(201).send({ id, name });
+    // res.send(pokeData.pokemon.push({}))
+  });
+
+  app.get("api/types", (req, res) => {
+    const result = pokeData.types;
+    let type = pokeData.pokemon[type];
+    if (result) {
+      res.send(result);
+    } else {
+      res.status(404).send("Not Found");
+    }
+  });
   // ↑↑↑↑ 宿題のプログラムは、ここより上に書く
 
   // '/'のルーティングは、その他のAPIのプログラムよりも下に記載

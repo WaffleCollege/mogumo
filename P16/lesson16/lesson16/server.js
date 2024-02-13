@@ -41,7 +41,7 @@ app.get("/user/:userId", (request, response) => {
 });
 
 // 新しいユーザーを作成するAPI
-app.get("/create/user", (request, response) => {
+app.post("/create/user", (request, response) => {
   // ここをPOSTだとできないなぜ？
   const newUser = request.body.user;
   // 新しいユーザーIDを決定する処理や、バリデーションなどは省略
